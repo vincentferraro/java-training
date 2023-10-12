@@ -1,18 +1,5 @@
 public class datatypeClass {
     
-    public class User {
-        String name = "Bob";
-
-        public void setName(String name){
-            this.name = name;
-        }
-
-        public String getName(){
-            return this.name;
-        }
-    }
-   
-    
 
     // Print
 
