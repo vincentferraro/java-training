@@ -8,7 +8,6 @@ public class DisplayChar {
     public char getCharacter(){
         return this.character;
     }
-    
     public static void main (String [] args){
         DisplayChar a = new DisplayChar();
         System.out.println(a.getCharacter());
