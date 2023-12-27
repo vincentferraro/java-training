@@ -4,22 +4,30 @@ public class Vehicule {
     int passengers;
     int fuelcap;
     int mpg;
+
+    Vehicule(int p, int f, int m){
+        passengers = p;
+        fuelcap = f;
+        mpg = m;
+    }
+
+    int range(){
+        return mpg *fuelcap;
+    }
+
+    double fuelneeded(int miles){
+        return (double) miles /mpg;
+    }
 }
 
 class VehiculeDemo{
     public static void main (String [] args){
-        Vehicule minivan = new Vehicule();
-        minivan.passengers = 1;
-        minivan.fuelcap = 100;
-        minivan.mpg= 10;
-        Vehicule minivan2 = minivan;
-        System.out.println("Minivan : ");
-        System.out.println("\t Passengers : " + minivan.passengers);
-        System.out.println("\t Fuelcap : " + minivan.fuelcap);
-        System.out.println("\t MPG : " + minivan.mpg);
-
-        minivan2.passengers =2;
-        System.out.println("Minivan: " + minivan.passengers);
+        Vehicule minivan = new Vehicule(1,100,10);
+        
+        int res = minivan.range();
+        System.out.println(res);
+        double fuelneeded = minivan.fuelneeded(300);
+        System.out.println(fuelneeded);
 
     }
 }
