@@ -12,5 +12,10 @@ public class ForEachLoop {
         }
 
         System.out.println(sum);
+
+    int arr2[]= {1,2,3,4};
+        for(int el : arr2){
+            el = el+1;
+        }
     }
 }
