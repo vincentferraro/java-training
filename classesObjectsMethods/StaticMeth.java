@@ -13,5 +13,10 @@ public class StaticMeth {
 class SDemo2{
     public static void main(String[] args) {
         System.out.println("val is " + StaticMeth.val);
+
+        System.out.println("Static method valDiv2: "+ StaticMeth.valDiv2());
+        System.out.println();
+
+        System.out.println("val is " + StaticMeth.val);
     }
 }
