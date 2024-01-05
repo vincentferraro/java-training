@@ -45,9 +45,19 @@ class Stack {
     private int [] values;
     private int size;
 
-    Stack( int s,int ... v){
+    Stack( int s){
         size = s;
-        values=v;
+        values[s];
+    }
+
+    public int length(){
+        return size;
+    }
+
+    public void push(int i){
+        if(values.length != size){
+            for()
+        }
     }
     
 }
