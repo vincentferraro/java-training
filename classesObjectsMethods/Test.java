@@ -47,7 +47,7 @@ class Stack {
 
     Stack( int s){
         size = s;
-        values[s];
+        
     }
 
     public int length(){
@@ -56,7 +56,7 @@ class Stack {
 
     public void push(int i){
         if(values.length != size){
-            for()
+            
         }
     }
     

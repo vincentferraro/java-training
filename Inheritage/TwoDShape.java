@@ -1,19 +1,45 @@
 package Inheritage;
 
+// INHERITANCE CLASS AND PRIVATE MEMBER'S CLASS.
 public class TwoDShape {
-    double width;
-    double height;
+    private double width;
+    private double height;
 
+    TwoDShape(double w, double h){
+        width = w;
+        height = h;
+    }
     void showDim(){
         System.out.println("Width and height are " + width + " and " + height);
+    }
+
+    // ACCESSOR METHODS
+
+    double getWidth(){
+        return width;
+    }
+    double getHeight(){
+        return height;
+    }
+    void setWidth(double w){
+        width = w;
+    }
+    void setHeight(double h){
+        height = h;
     }
 }
 
 class Triangle extends TwoDShape{
-    String style;
+    private String style;
 
+    Triangle(double w, double h, String s){
+        super(w,h);  // call constructor from TwoDShape
+        // setWidth(w);    // Initialize TwoDShape portion of object
+        // setHeight(h);     // Initialize TwoDShape portion of object
+        style = s;
+    }
     double area(){
-        return width * height / 2;
+        return getWidth() * getHeight() / 2;
     }
 
     void showStyle(){
@@ -24,28 +50,22 @@ class Triangle extends TwoDShape{
 
 class Rectangle extends TwoDShape{
     boolean isSquare(){
-        if(width == height) return true;
+        if(getWidth() == getHeight()) return true;
         return false;
     }
 
     double area(){
-        return width * height ;
+        return getHeight() * getWidth() ;
     }
 }
 
 class Shapes{
     public static void main(String[] args) {
         
-        Triangle t1 = new Triangle();
-        Triangle t2 = new Triangle();
+        Triangle t1 = new Triangle(4.0,4.0, "filled");
+        Triangle t2 = new Triangle(8.0,12.0,"outlined");
 
-        t1.width = 4.0;
-        t1.height = 4.0;
-        t1.style = "filled";
-
-        t2.width = 8.0;
-        t2.height = 12.0;
-        t2.style = "outlined";
+       
 
         System.out.println(" Info for t1 :");
         t1.showStyle();
@@ -63,9 +83,8 @@ class Shapes{
         System.out.println("//////////");
 
         Rectangle r1 = new Rectangle();
-        r1.height = 1.0;
-        r1.width = 1.0;
-
+        r1.setHeight(1.0);
+        r1.setWidth(1.0);
         System.out.println("Is square? " + r1.isSquare());
     }
 }
