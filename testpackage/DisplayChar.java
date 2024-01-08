@@ -1,3 +1,4 @@
+package testpackage;
 public class DisplayChar {
     private char character='a';
     

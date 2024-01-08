@@ -1,3 +1,4 @@
+package testpackage;
 public class Switch {
     public static void main (String []args) throws java.io.IOException{
 
