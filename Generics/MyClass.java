@@ -57,4 +57,4 @@ class MyClass2<T extends Number> implements Summation<T>{
         }
         return total;
     }
-}
+}@
