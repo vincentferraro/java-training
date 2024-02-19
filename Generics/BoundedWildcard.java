@@ -33,6 +33,6 @@ public class BoundedWildcard {
         test(w);
         test(w2);
         test(w3);
-       // test(w4); // ERROR because doesn't inherit from A's class
+       test(w4); // ERROR because doesn't inherit from A's class
     }
 }
